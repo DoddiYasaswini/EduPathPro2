@@ -1,0 +1,43 @@
+
+body { 
+    font-family: 'Poppins', sans-serif; 
+    background: #f0f2f5; 
+}
+
+.glass-card { 
+    background: rgba(255, 255, 255, 0.95); 
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255,255,255,0.2); 
+}
+
+.animate-fade { 
+    animation: fadeIn 0.5s ease-in; 
+}
+
+@keyframes fadeIn { 
+    from { opacity: 0; } 
+    to { opacity: 1; } 
+}
+
+.option-btn { 
+    transition: all 0.3s; 
+    border: 2px solid #e2e8f0; 
+}
+
+.option-btn:hover { 
+    border-color: #6366f1; 
+    background: #f5f3ff; 
+}
+
+.selected-option { 
+    border-color: #6366f1; 
+    background: #eef2ff; 
+    font-weight: 600; 
+}
+
+/* Print styles for PDF download */
+@media print {
+    body { background: white; }
+    #roadmap-section button { display: none; }
+    .glass-card, .shadow-2xl { box-shadow: none; border: none; }
+}
